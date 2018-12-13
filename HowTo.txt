@@ -1,0 +1,39 @@
+GIMP Plug-in that compiles Cluttersims and PDS Radargram
+	in a layered GIMP file for ease of viewing for
+	fast or detailed comparison. GIMP allows zooming
+	in and altering levels to fit the situation or the
+	radar interpreter's preferences.
+
+This Plug-in is designed to work for members of SWIM (Subsurface
+	Water Ice Mapping) with access to the "SWIMming Pool."
+	However, it can easily be modified for use on another
+	machine by altering the filepaths in the python function
+	used by the plug-in.
+
+To Use the Plug-in:
+	-With GIMP closed, insert the "gimp_clutter_swim.py"
+		file in GIMP's plug-ins directory. If you don't
+		know where this is you can find out in 
+		GIMP > Preferences > Folders > Plug-ins
+	-Open GIMP
+	-Open Filters > Python-Fu > Console
+	-In the Console, type in the following:
+		pdb.python_fu_clutter('Orbit_Number', 'Region')
+	-'Orbit Number' should be 7 digits long; 6 digit orbits
+		should be preceded by a "0"
+	-'Region' should have an initial letter capitalized. The
+		only options that should work here are:
+			Onilus
+			Utopia
+			Arcadia
+			Acidalia
+		If any new regions are added and their clutter sim
+		and PDS radargram images uploaded in the same file
+		path format they should work in this scheme too.
+	-A couple examples of command line runs:
+		pdb.python_fu_clutter('4592401','Onilus')
+		pdb.python_fu_clutter('0169201','Utopia')
+	-After running the command you should see an image opened in
+		GIMP with a layer for each PDS Radargram or Clutter
+		Sim product image.
+		
