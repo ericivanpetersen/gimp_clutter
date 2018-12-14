@@ -53,7 +53,7 @@ def make_clutter_gimpfile(orbit, region, hival=50, gamma=1.5):
 	# Add in Echo Power map and move down for better viewing:
 	echo = pdb.gimp_file_load_layer(img, echofile)
 	img.add_layer(echo, 0)
-	img.active_layer.translate(0, 3000)
+	img.active_layer.translate(0, 2750)
 
 	# Save as XCF File (inactive):
 	#drawable = img.active_drawable
