@@ -36,4 +36,14 @@ To Use the Plug-in:
 	-After running the command you should see an image opened in
 		GIMP with a layer for each PDS Radargram or Clutter
 		Sim product image.
-		
+
+To Use Batch Plug-in:
+	-Insert "gimp_clutter_batch.py" into gimp plug-ins, as described
+		above.
+	-Run the following command in the Python-Fu console in gimp:
+		pdb.python_fu_batch_clutter({clutter_directory}, {pds_tif_directory}, {output_directory})
+	-The plug-in will create gimp files for all the clutter simulations/pds tif
+		combinations it finds, putting them in the output directory.
+	-Error messages and print statements specific to the program are 
+		output to {output_dir}/gimpstderr.txt and {output_dir}/gimpstdout.txt
+		respectively.		
